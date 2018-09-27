@@ -31,14 +31,10 @@ class SaveOrderMultiplied implements ObserverInterface
     private $logger;
 
     /**
-     * @var SearchCriteriaBuilderFactory
-     */
-    private $searchCriteriaBuilderFactory;
-
-    /**
      * @var ScopeInterface
      */
     private $scopeConfig;
+
     /**
      * @var ManagerInterface
      */
@@ -47,14 +43,12 @@ class SaveOrderMultiplied implements ObserverInterface
     /**
      * SaveOrderMultiplied constructor.
      * @param OrderRepositoryInterface $orderRepository
-     * @param SearchCriteriaBuilderFactory $searchCriteriaBuilderFactory
      * @param \Psr\Log\LoggerInterface $logger
      * @param ManagerInterface $messageManager
-     * @param ScopeConfigInterface|ScopeInterface $scopeConfig
+     * @param ScopeConfigInterface $scopeConfig
      */
     public function __construct(
         OrderRepositoryInterface $orderRepository,
-        SearchCriteriaBuilderFactory $searchCriteriaBuilderFactory,
         \Psr\Log\LoggerInterface $logger,
         ManagerInterface $messageManager,
         ScopeConfigInterface $scopeConfig
@@ -62,7 +56,6 @@ class SaveOrderMultiplied implements ObserverInterface
     {
         $this->logger = $logger;
         $this->orderRepository = $orderRepository;
-        $this->searchCriteriaBuilderFactory = $searchCriteriaBuilderFactory;
         $this->scopeConfig = $scopeConfig;
         $this->messageManager = $messageManager;
     }
