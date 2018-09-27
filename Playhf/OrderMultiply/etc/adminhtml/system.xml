@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="multiply" translate="label" type="text" sortOrder="-1000" showInDefault="1" showInWebsite="1" showInStore="1">
+            <resource>Playhf_OrderMultiply::config</resource>
+            <class>separator-top</class>
+            <label>Orders Multiply Settings</label>
+            <tab>sales</tab>
+            <group id="general" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="isactive" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable multiplying</label>
+                    <comment><![CDATA[Enable or Disable sum multiplying by a decimal factor]]></comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="decimal" translate="label comment" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Set the decimal factor</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

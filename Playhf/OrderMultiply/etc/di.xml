@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="\Playhf\OrderMultiply\Api\OrderRepositoryInterface"
+                type="\Playhf\OrderMultiply\Model\OrderRepository" />
+    <preference for="\Playhf\OrderMultiply\Api\Data\OrderInterface" type="\Playhf\OrderMultiply\Model\Order" />
+    <preference for="\Playhf\OrderMultiply\Api\Data\OrderSearchResultInterface"
+                type="Magento\Framework\Api\SearchResults" />
+
+</config>
